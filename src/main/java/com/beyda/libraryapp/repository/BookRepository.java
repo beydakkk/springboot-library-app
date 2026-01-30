@@ -1,0 +1,19 @@
+package com.beyda.libraryapp.repository;
+
+import com.beyda.libraryapp.domain.Book;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
+
+public interface BookRepository extends JpaRepository<Book, Long> {
+
+    // Requirement: 2023'den sonra basılan kitaplar
+    @Query("select b from Book b where b.publishedYear > :year")
+    List<Book> findBooksPublishedAfter(int year);
+
+    // Requirement: list 2 publishers with their books and authors -> fetch graph handled in PublisherRepository query
+    @Query("select b from Book b join fetch b.publisher p left join fetch b.author a")
+    List<Book> findAllWithPublisherAndAuthor();
+}
+
