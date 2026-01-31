@@ -41,8 +41,10 @@ public class GoogleBooksService {
                     Double price = (item.saleInfo() != null && item.saleInfo().listPrice() != null)
                             ? item.saleInfo().listPrice().amount()
                             : null;
+                    
+                    BigDecimal priceBd = (price != null) ? BigDecimal.valueOf(price.doubleValue()) : null;
 
-                    return new BookResponse(null, title, BigDecimal.valueOf(price), isbn13, null, publisher, author);
+                    return new BookResponse(null, title, priceBd, isbn13, null, publisher, author);
                 })
                 .toList();
     }
