@@ -48,8 +48,7 @@ public class BookController {
     public void delete(@PathVariable Long id) {
         bookService.delete(id);
     }
-
-    // Requirement: stream ile A ile başlayan kitaplar
+    
     @GetMapping("/starts-with-a")
     public List<BookResponse> startsWithA() {
         return bookService.findStartingWithAStream().stream()
