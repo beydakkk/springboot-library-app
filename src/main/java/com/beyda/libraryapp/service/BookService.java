@@ -27,7 +27,7 @@ public class BookService {
     }
 
     public Book getById(Long id) {
-        return bookRepository.findById(id)
+        return bookRepository.findByIdWithPublisherAndAuthor(id)
                 .orElseThrow(() -> new NotFoundException("Book don't found: " + id));
     }
 
@@ -92,12 +92,12 @@ public class BookService {
     }
 
     public List<Book> findPublishedAfter2023() {
-        return bookRepository.findBooksPublishedAfter(2023);
+        return bookRepository.findBooksPublishedAfterWithPublisherAndAuthor(2023);
     }
 
     // Requirement: 'A' harfiyle başlayan kitapları getiren stream yapısı
     public List<Book> findStartingWithAStream() {
-        return bookRepository.findAll().stream()
+        return bookRepository.findAllWithPublisherAndAuthor().stream()
                 .filter(b -> b.getTitle() != null && b.getTitle().toUpperCase().startsWith("A"))
                 .toList();
     }
