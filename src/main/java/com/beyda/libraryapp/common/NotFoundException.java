@@ -1,4 +1,4 @@
-package com.mindtech.libraryapp.common;
+package com.beyda.libraryapp.common;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException(String message) {

@@ -23,7 +23,7 @@ public class Book {
     private String title;
 
     @Column(precision = 10, scale = 2)
-    private BigDecimal price;
+    private Double price;
 
     @Column(name = "isbn13", unique = true)
     private String ISBN13;

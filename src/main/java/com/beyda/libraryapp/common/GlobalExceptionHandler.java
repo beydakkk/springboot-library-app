@@ -1,4 +1,4 @@
-package com.mindtech.libraryapp.common;
+package com.beyda.libraryapp.common;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
