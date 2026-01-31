@@ -1,9 +1,11 @@
 package com.beyda.libraryapp.api.dto;
 
+import java.math.BigDecimal;
+
 public record BookResponse(
         Long bookId,
         String title,
-        Double price,
+        BigDecimal price,
         String ISBN13,
         Integer publishedYear,
         String publisherName,

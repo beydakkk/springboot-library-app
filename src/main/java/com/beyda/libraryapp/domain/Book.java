@@ -21,9 +21,9 @@ public class Book {
 
     @Column(nullable = false)
     private String title;
-
+    
     @Column(precision = 10, scale = 2)
-    private Double price;
+    private BigDecimal price;
 
     @Column(name = "isbn13", unique = true)
     private String ISBN13;

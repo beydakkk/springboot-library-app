@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
+import java.math.BigDecimal;
 
 @Service
 @RequiredArgsConstructor
@@ -41,7 +42,7 @@ public class GoogleBooksService {
                             ? item.saleInfo().listPrice().amount()
                             : null;
 
-                    return new BookResponse(null, title, price, isbn13, null, publisher, author);
+                    return new BookResponse(null, title, BigDecimal.valueOf(price), isbn13, null, publisher, author);
                 })
                 .toList();
     }
