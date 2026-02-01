@@ -19,15 +19,9 @@ Author - Her yazar bir kitap ile ilişkilidir
 
 🚀 Sağlanan Fonksiyonlar
 
-Listeleme İşlemleri:
--Tüm yayınevlerini listeleme
--Tüm kitapları listeleme
--Tüm yazarları listeleme
--İki yayınevine ait kitapları yazarlarıyla birlikte listeleme
+Listeleme İşlemleri: Tüm yayınevlerini listeleme, Tüm kitapları listeleme, Tüm yazarları listeleme, İki yayınevine ait kitapları yazarlarıyla birlikte listeleme
 
-Filtreleme & Query
--Stream API kullanarak, “A” harfiyle başlayan kitapları getiren yapı
--JPA Query kullanarak, 2023 yılından sonra basılan kitapları filtreleme
+Filtreleme & Query: Stream API kullanarak, “A” harfiyle başlayan kitapları getiren yapı, JPA Query kullanarak, 2023 yılından sonra basılan kitapları filtreleme
 
 ✏️ CRUD İşlemleri
 
